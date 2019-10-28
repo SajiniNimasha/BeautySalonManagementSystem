@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-07-27T23:02:12 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="wow" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8e15d519-eab3-497d-b483-a5c1caac3ee0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Salon"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="c21zLmFwcG9pbnRtZW50ICwxNSwxNSxhY2U0ZWM5MC1mMzUyLTQ5MDgtYjlhZi00YmNlZjcxYzlh&#xA;MGU7c21zLmNsaWVudCBBUyAsMTkwLDE5LDdkMmNiMDg2LTM0N2QtNGYwNC05ZGYwLTBlMmQ3M2Fi&#xA;NzFiNztzbXMucGF5bWVudCAsMTc5LDgxLDM0YjlhZWY5LWRjNGYtNDlkZi05OWJkLWJmZTlmZWRk&#xA;MGQzOTs="/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString>
+		<![CDATA[SELECT sms.appointment.`clientId`,
+	sms.payment.price,
+	sms.client.`clientName`
+FROM sms.appointment
+	INNER JOIN sms.payment ON 
+	 sms.appointment.`paymentId` = sms.payment.`paymentId` 
+	INNER JOIN sms.client ON 
+	 sms.appointment.`clientId` = sms.client.`clientId`]]>
+	</queryString>
+	<field name="clientId" class="java.lang.String"/>
+	<field name="price" class="java.math.BigDecimal"/>
+	<field name="clientName" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/15)]]></groupExpression>
+		<groupHeader>
+			<band height="54">
+				<textField>
+					<reportElement mode="Opaque" x="0" y="21" width="140" height="30" forecolor="#331AF0" backcolor="#FCDEF8" uuid="7bd3c0c8-a006-41d3-9086-1069425c55b2"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{clientId}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="278" y="21" width="82" height="30" forecolor="#331AF0" backcolor="#FCDEF8" uuid="0c0b88ee-f640-4e34-ba5a-1ec696c9598e"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="129" y="21" width="149" height="30" forecolor="#331AF0" backcolor="#FCDEF8" uuid="af56388e-e696-4f1a-9661-4d2e991302f6"/>
+					<textElement textAlignment="Center">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{clientName}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[(int)($V{REPORT_COUNT}/5)]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="150" y="0" width="263" height="33" forecolor="#BF1613" uuid="91f5fe7f-a65f-46a3-81ae-30f2d82c45a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Client Payment]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="2c4ebb21-8745-45a1-a9ad-477acaac72cb"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="-4" y="3" width="100" height="30" uuid="9e10c99e-e323-4ffd-94da-e4e559f61c10"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Client Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="2" width="100" height="30" uuid="cc95014e-e61b-4c84-8efd-b612cd97dc74"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Client Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="2" width="100" height="30" uuid="de0aba9c-ec5e-4001-805f-0b4f7e818ced"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

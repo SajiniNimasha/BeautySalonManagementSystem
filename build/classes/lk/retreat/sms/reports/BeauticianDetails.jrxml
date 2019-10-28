@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-07-25T22:11:02 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BeauticianDetails" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9624d229-f63b-4013-8f89-50eaae7c6172">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Salon"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="c21zLmVtcGxveWVlIEFTICwxOTUsNTIsNmE5MjE0NWItNDBlMi00MTI0LTlmNjEtYTUwZDU4MTgw&#xA;OTE0Ow=="/>
+	<queryString>
+		<![CDATA[SELECT sms.employee.`employeeId`,
+	sms.employee.address,
+	sms.employee.`employeeName`,
+	sms.employee.tele,
+	sms.employee.`Email`,
+	sms.employee.`firstInDate`
+FROM sms.employee]]>
+	</queryString>
+	<field name="employeeId" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="employeeName" class="java.lang.String"/>
+	<field name="tele" class="java.lang.Integer"/>
+	<field name="Email" class="java.lang.String"/>
+	<field name="firstInDate" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="146" y="30" width="270" height="30" uuid="9becab53-09a7-4ba3-9118-7ab3c3165496"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salon Beautician Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="95" height="30" uuid="130b6fd3-3948-4566-8745-44303ff4f758"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[employeeId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="0" width="92" height="30" uuid="b51e51b8-6ab7-4781-9f69-ddc22b95f682"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="0" width="92" height="30" uuid="7d1bc6e4-a1c2-4c73-b9b3-1cec224bea16"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[employeeName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="92" height="30" uuid="1dd13f8a-bd33-444e-94a4-435029216dc2"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tele]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="0" width="92" height="30" uuid="a25090dc-8c73-4cc1-a01b-06f8774de7f2"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="0" width="92" height="30" uuid="de1bbf44-8578-4fe1-a0dd-b59a13e6853a"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[firstInDate]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="51" width="95" height="30" backcolor="#FCE6F9" uuid="269bd878-1eda-47bc-a683-d9d05d225cc9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employeeId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="95" y="51" width="92" height="30" backcolor="#FCE6F9" uuid="7714b22d-1a68-4ef1-ba02-45d3dd59a7d8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="187" y="51" width="92" height="30" backcolor="#FCE6F9" uuid="c7912c89-e006-40af-a149-0ed197121d52"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employeeName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="279" y="51" width="92" height="30" backcolor="#FCE6F9" uuid="30361c1f-450b-4fb7-aef7-fcc526caf288"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tele}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="371" y="51" width="92" height="30" backcolor="#FCE6F9" uuid="f88e2823-9dc7-464f-b24e-ef2d6e190cd3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="463" y="51" width="92" height="30" backcolor="#FCE6F9" uuid="aafde7d9-a94a-47c2-9697-cbbdd7cfc645"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{firstInDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="reportPane" prefHeight="700.0" prefWidth="1015.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.retreat.sms.controller.ReportsController">
+   <children>
+      <ImageView fitHeight="43.0" fitWidth="1021.0" layoutX="-5.0" layoutY="656.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/IMG_20180710_195312.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="42.0" layoutY="658.0" prefHeight="36.0" prefWidth="95.0" text="Back">
+         <font>
+            <Font name="Book Antiqua Bold" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="btn" fitHeight="43.0" fitWidth="36.0" layoutX="5.0" layoutY="655.0" onMouseClicked="#back" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/20180630232819.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="230.0" fitWidth="501.0" layoutX="214.0" layoutY="425.0" opacity="0.45" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/20180630115954.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="1021.0" layoutX="-5.0" layoutY="-7.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/IMG_20180710_195312.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="67.0" layoutY="40.0" text="Client Reports" textFill="#e13364" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="356.0" layoutY="38.0" text="Beautician Reports" textFill="#e13364" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="beauticianBtn" layoutX="340.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#clickToBeauticianDetail" prefHeight="43.0" prefWidth="193.0" style="-fx-background-color: #FCEDF6;" text="Beautician Details" textFill="#274039">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Separator layoutX="278.0" layoutY="36.0" orientation="VERTICAL" prefHeight="372.0" prefWidth="9.0" />
+      <Button fx:id="beauticianBtn2" layoutX="340.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#clickToBeauticianAppointment" prefHeight="43.0" prefWidth="193.0" style="-fx-background-color: #FCEDF6;" text="Beautician Appointments'" textFill="#274039">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="clientDetails" layoutX="33.0" layoutY="101.0" mnemonicParsing="false" onAction="#openClientDetails" prefHeight="43.0" prefWidth="193.0" style="-fx-background-color: #FCEDF6;" text="Client Details" textFill="#274039">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="clientAppointments" layoutX="32.0" layoutY="241.0" mnemonicParsing="false" onAction="#openClientAppointment" prefHeight="43.0" prefWidth="193.0" style="-fx-background-color: #FCEDF6;" text="Client Appointments" textFill="#274039">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="664.0" layoutY="39.0" text="ServiceReports" textFill="#e13364" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="574.0" layoutY="36.0" orientation="VERTICAL" prefHeight="372.0" prefWidth="9.0" />
+      <Button fx:id="mainService" layoutX="614.0" layoutY="101.0" mnemonicParsing="false" onMouseClicked="#clickToMainSrviceDetail" prefHeight="43.0" prefWidth="227.0" style="-fx-background-color: #FCEDF6;" text="Main Service Category Details" textFill="#274039">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="subService" layoutX="614.0" layoutY="239.0" mnemonicParsing="false" onMouseClicked="#clickToSubSrviceDetail" prefHeight="43.0" prefWidth="227.0" style="-fx-background-color: #FCEDF6;" text="Sub Service Category Details" textFill="#274039">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="shedule" layoutX="340.0" layoutY="360.0" mnemonicParsing="false" onAction="#shedule" prefHeight="43.0" prefWidth="193.0" style="-fx-background-color: #FCEDF6;" text="Beautician Shedules" textFill="#274039">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="demand" layoutX="33.0" layoutY="361.0" mnemonicParsing="false" onAction="#demand" prefHeight="43.0" prefWidth="193.0" style="-fx-background-color: #FCEDF6;" text="Client Payments" textFill="#274039">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

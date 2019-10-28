@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="editEmployeePane" prefHeight="335.0" prefWidth="459.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.retreat.sms.controller.EditEmployeeController">
+   <children>
+      <ImageView fitHeight="317.0" fitWidth="449.0" layoutX="-1.0" opacity="0.06" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/IMG_20180630_152209.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="20.0" layoutY="15.0" prefHeight="36.0" prefWidth="215.0" text="Edit Employee">
+         <font>
+            <Font name="Book Antiqua Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="96.0" text="Employee Id">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="134.0" text="Employee Name">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="172.0" text="Address">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="211.0" text="Contact No">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="262.0" text="E-mail">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="eId" focusColor="#c6415c" layoutX="155.0" layoutY="96.0" prefHeight="25.0" prefWidth="247.0" />
+      <JFXTextField fx:id="eName" focusColor="#c6415c" layoutX="155.0" layoutY="133.0" prefHeight="25.0" prefWidth="247.0" />
+      <JFXTextField fx:id="eadd" focusColor="#c6415c" layoutX="156.0" layoutY="170.0" prefHeight="25.0" prefWidth="247.0" />
+      <JFXTextField fx:id="eTel" focusColor="#c6415c" layoutX="157.0" layoutY="209.0" prefHeight="25.0" prefWidth="247.0" />
+      <JFXTextField fx:id="mail" focusColor="#c6415c" layoutX="157.0" layoutY="248.0" prefHeight="25.0" prefWidth="247.0" />
+      <ImageView fitHeight="46.0" fitWidth="460.0" layoutX="-1.0" layoutY="315.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/IMG_20180710_195312.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="405.0" layoutY="314.0" prefHeight="46.0" prefWidth="54.0" text="Edit">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="edit" fitHeight="26.0" fitWidth="31.0" layoutX="374.0" layoutY="323.0" onMouseClicked="#clickToEdit" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/20180701000038.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

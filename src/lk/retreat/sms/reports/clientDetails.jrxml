@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-07-25T21:43:21 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6d95eaca-d5a5-43ac-814d-bce53215feb5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Salon"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="c21zLmNsaWVudCBBUyAsMTgwLDE2LGMzNzMzNjA5LWQ2M2YtNGEwZS1hMmFmLTNjNWUxODEzMmI2Mzs="/>
+	<queryString>
+		<![CDATA[SELECT sms.client.`clientId`,
+	sms.client.`clientName`,
+	sms.client.`clientAddress`,
+	sms.client.`clientTel`,
+	sms.client.`clientEmail`,
+	sms.client.`firstInDate`
+FROM sms.client]]>
+	</queryString>
+	<field name="clientId" class="java.lang.String"/>
+	<field name="clientName" class="java.lang.String"/>
+	<field name="clientAddress" class="java.lang.String"/>
+	<field name="clientTel" class="java.lang.Integer"/>
+	<field name="clientEmail" class="java.lang.String"/>
+	<field name="firstInDate" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="20" width="180" height="30" uuid="0334141a-473b-4798-9ef8-910a6eb1e5b8"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Client Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-21" y="3" width="95" height="30" uuid="d5cb605b-a772-4323-831e-afa9b98eaf14"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[clientId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="3" width="92" height="30" uuid="51504493-db9c-4b25-8d08-8157d5345042"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[clientName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="183" y="3" width="92" height="30" uuid="ee2820c7-4106-40bb-96df-9f9815db2f1c"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[clientAddress]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="283" y="2" width="92" height="30" uuid="b0dca9e2-af5e-4295-a682-8edfc8fc4353"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[clientTel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="2" width="92" height="30" uuid="aed26543-156b-4fd3-8c34-96f17381ba5e"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[clientEmail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="2" width="92" height="30" uuid="eb182178-7354-45e8-8a1b-930de50ca0af"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[firstInDate]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="-19" y="42" width="95" height="30" backcolor="#FFEDFD" uuid="f1b7cc83-c3a1-4511-92cd-341d840adf55"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="79" y="42" width="98" height="30" backcolor="#FFEDFD" uuid="f0f639c5-576b-4343-afb5-149ba3bced55"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="182" y="43" width="96" height="30" backcolor="#FFEDFD" uuid="cbd5d257-9777-4341-83d0-0da07ee26906"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="283" y="42" width="96" height="30" backcolor="#FFEDFD" uuid="b2b5d92b-d763-4451-94a8-58c8c3e31645"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientTel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="384" y="43" width="92" height="30" backcolor="#FFEDFD" uuid="c339911e-89bc-49aa-9600-f35890b71c4c"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientEmail}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="485" y="43" width="86" height="30" backcolor="#FFEDFD" uuid="b06bc890-4669-4f3a-a62c-be9c3bd87214"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{firstInDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

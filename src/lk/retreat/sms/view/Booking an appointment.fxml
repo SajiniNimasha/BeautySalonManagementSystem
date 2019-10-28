@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="bookAppointmentPane" prefHeight="585.0" prefWidth="586.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.retreat.sms.controller.BookingAnAppointmentController">
+   <children>
+      <ImageView fitHeight="531.0" fitWidth="646.0" layoutX="-1.0" layoutY="-1.0" opacity="0.09" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/IMG_20180630_152209.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="1.0" layoutY="9.0" text="Booking An Appointment">
+         <font>
+            <Font name="Book Antiqua Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="1.0" layoutY="34.0" prefHeight="34.0" prefWidth="586.0" />
+      <Label layoutX="11.0" layoutY="126.0" prefHeight="34.0" prefWidth="76.0" text="Client Id">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="204.0" text="Client Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="258.0" text="Category">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="317.0" text="Services">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox layoutX="109.0" layoutY="131.0" prefHeight="25.0" prefWidth="195.0" />
+      <JFXComboBox layoutX="109.0" layoutY="308.0" prefHeight="25.0" prefWidth="195.0" />
+      <JFXTextField layoutX="101.0" layoutY="198.0" prefHeight="25.0" prefWidth="195.0" />
+      <ImageView fitHeight="54.0" fitWidth="645.0" layoutY="531.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/IMG_20180710_195312.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="264.0" layoutY="548.0" text="Book An Appointment">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="cancel" layoutX="540.0" layoutY="550.0" onMouseClicked="#clickToCancel" text="Cancel">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="229.0" layoutY="543.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/20180630231505.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="499.0" layoutY="543.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/20180706221506.png" />
+         </image>
+      </ImageView>
+      <JFXRadioButton layoutX="110.0" layoutY="264.0" text="Hair Care">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="212.0" layoutY="264.0" text="Face &amp; Skin">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="415.0" layoutY="264.0" text="Makeup">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="320.0" layoutY="264.0" text="Nail Care">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="500.0" layoutY="264.0" text="Dressing">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXRadioButton>
+   </children>
+</AnchorPane>

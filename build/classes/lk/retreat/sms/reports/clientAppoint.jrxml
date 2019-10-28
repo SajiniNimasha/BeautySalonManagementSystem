@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-07-25T21:59:16 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2eed0d87-15f9-40b2-b8c3-fad8b4692f0b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Salon"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="c21zLnNlcnZpY2VkZXRhaWwgQVMgLDEyNiwyMzIsZjdhYWNhZTQtMzQ5OS00ZTk2LTg2MGItMTdk&#xA;MGZiYWIwMDc0O3Ntcy5jbGllbnQgQVMgLDg5LDM0LGIwYzRmYWVlLTk4YzgtNDExNC1iNGNmLTUy&#xA;ZDQ0YTc3NTZjMjtzbXMuYXBwb2ludG1lbnQgQVMgLDMxOSw1LGM0MjMxYmI1LTEzODUtNDQwNi1i&#xA;YjM0LTFjZmY0NjQ5MGFlMzs="/>
+	<queryString>
+		<![CDATA[SELECT sms.client.`clientId`,
+	sms.client.`clientName`,
+	sms.appointment.`appointmentId`,
+	sms.appointment.date,
+	sms.appointment.time,
+	sms.servicedetail.`mainCategoryName`
+FROM sms.servicedetail
+	INNER JOIN sms.appointment ON 
+	 sms.servicedetail.`appointmentId` = sms.appointment.`appointmentId` 
+	INNER JOIN sms.client ON 
+	 sms.appointment.`clientId` = sms.client.`clientId`]]>
+	</queryString>
+	<field name="clientId" class="java.lang.String"/>
+	<field name="clientName" class="java.lang.String"/>
+	<field name="appointmentId" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="time" class="java.lang.String"/>
+	<field name="mainCategoryName" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="5" width="270" height="30" uuid="1947958d-f95e-4ffa-b6cb-6e228a994c6c"/>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Client Appointments]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-14" y="0" width="81" height="30" uuid="9240a8c4-8cb2-4034-835b-6f69c2367d9b"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[clientId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="0" width="79" height="30" uuid="4ae54055-dc3d-4a89-9cc7-970431842976"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[clientName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="0" width="99" height="30" uuid="639630fa-f936-4749-8935-e6ca97f4a2c0"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[appointmentId]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="0" width="79" height="30" uuid="8af1d889-68a1-4dd4-8a0b-f54817742215"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="386" y="0" width="79" height="30" uuid="e349568a-f74e-4cbf-b719-61c83d7e3cbb"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="0" width="110" height="30" uuid="3dc4c901-5ba3-447a-ab82-714da959fa15"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[mainCategoryName]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="64" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="-17" y="34" width="81" height="30" backcolor="#FAEDF9" uuid="981e6de1-e690-4a56-b0fc-2ba0fc6cded1"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="82" y="34" width="79" height="30" backcolor="#FAEDF9" uuid="f1ef9f6c-f831-4eaa-9b76-ca60fb4ef47b"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="177" y="34" width="99" height="30" backcolor="#FAEDF9" uuid="70610949-8d09-4ab3-b75a-4704ddbdb9c7"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{appointmentId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="287" y="34" width="79" height="30" backcolor="#FAEDF9" uuid="45d26a3b-2e4e-4595-8353-d28db0d87187"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="383" y="34" width="79" height="30" backcolor="#FAEDF9" uuid="8ca11f80-658d-42eb-8692-f2b875d971b5"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="470" y="34" width="91" height="30" backcolor="#FAEDF9" uuid="2ea82f7d-9b99-4aa0-a99f-af626bfde8ad"/>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mainCategoryName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="94" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="servicePane" prefHeight="700.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.retreat.sms.controller.SalonServicesController">
+   <children>
+      <AnchorPane layoutX="-3.0" layoutY="38.0" prefHeight="611.0" prefWidth="1015.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="155.0" fitWidth="530.0" layoutX="248.0" layoutY="7.0" opacity="0.38" pickOnBounds="true">
+               <image>
+                  <Image url="@../asset/IMG_20180630_152209.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="24.0" layoutY="116.0" text="Services" textFill="#10000a">
+               <font>
+                  <Font name="Book Antiqua Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="521.0" text="Search">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="83.0" layoutY="519.0" prefHeight="25.0" prefWidth="217.0" />
+            <Button layoutX="325.0" layoutY="519.0" mnemonicParsing="false" text="Search">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Separator layoutY="602.0" prefHeight="9.0" prefWidth="1015.0" style="-fx-background-color: pink;" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="serviceTable" layoutX="16.0" layoutY="200.0" prefHeight="401.0" prefWidth="977.0" stylesheets="@css/managecustomerform.css">
+        <columns>
+            <TableColumn minWidth="0.0" prefWidth="297.0" text="Service Name" />
+            <TableColumn minWidth="0.0" prefWidth="342.0" text="Service Category" />
+            <TableColumn minWidth="0.0" prefWidth="337.0" text="Charge" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="49.0" fitWidth="1015.0" layoutX="-1.0" layoutY="649.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/IMG_20180710_195312.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="editServiceInformation" layoutX="370.0" layoutY="649.0" onMouseClicked="#clickToEditService" prefHeight="49.0" prefWidth="148.0" text="Edit Service Information">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="deletebtn" layoutX="655.0" layoutY="644.0" onMouseClicked="#dclickToDelete" prefHeight="55.0" prefWidth="87.0" text="Delete Service">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="addService" layoutX="940.0" layoutY="648.0" onMouseClicked="#clickToAddService" prefHeight="49.0" prefWidth="73.0" text="Add Service">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="cancelLbl" layoutX="38.0" layoutY="653.0" onMouseClicked="#clickOnCancelLbl" prefHeight="40.0" prefWidth="98.0" text="Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="8.0" layoutY="659.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/20180630232819.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="28.0" layoutX="325.0" layoutY="663.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/20180701000038.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="627.0" layoutY="661.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/20180630231704.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="912.0" layoutY="661.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/20180630231505.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="1015.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asset/IMG_20180710_195312.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

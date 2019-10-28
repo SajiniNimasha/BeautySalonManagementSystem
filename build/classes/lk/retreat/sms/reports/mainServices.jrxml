@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-07-25T22:59:41 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="671a1517-1ff8-4375-885f-2e643ae04bf6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Salon"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value="c21zLnN1YmNhdGVnb3J5IEFTICwzMzIsMTcsNmY3MjYyZjAtZTBkMi00OTczLWIwOTYtYWU4ZjQ0&#xA;MDJlNjJiO3Ntcy5tYWluY2F0ZWdvcnkgQVMgLDk3LDE0LDAyZmExYTc4LTU5NGItNDRmMy04NGUw&#xA;LTZkMmEzNDYwNTRiNzs="/>
+	<queryString>
+		<![CDATA[SELECT sms.maincategory.`mainCategoryName`,
+	sms.subcategory.`subCategoryName`
+FROM sms.subcategory
+	INNER JOIN sms.maincategory ON 
+	 sms.subcategory.`mainCategoryName` = sms.maincategory.`mainCategoryName`]]>
+	</queryString>
+	<field name="mainCategoryName" class="java.lang.String"/>
+	<field name="subCategoryName" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="20" width="390" height="30" uuid="18e88c1f-505a-44d1-ba60-16b6f8e364e1"/>
+				<textElement textAlignment="Center">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Service Category]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="278" height="30" uuid="bb3b6fe8-d795-423a-871f-e7122f749b5a"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[mainCategoryName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="0" width="277" height="30" uuid="6851d085-3af0-4eff-baed-2093293ee859"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[subCategoryName]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="27" width="278" height="30" backcolor="#FCEBFB" uuid="cbe0799e-d2c4-46ff-87a8-0d676305c2da"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{mainCategoryName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="278" y="27" width="277" height="30" backcolor="#FCEBFB" uuid="b7466114-bec8-454f-aa20-3a4749ef5bfb"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{subCategoryName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
